@@ -1,0 +1,91 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+body {
+  margin: 0px;
+  font-family: 'NanumSquare', sans-serif;
+}
+.items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0;
+}
+.info b {
+  font-size: 1.5rem;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #edebeb;
+  background-color: #f5f9fc;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.animal-list {
+  margin-top: 90px;
+}
+.animal-button {
+  all: unset;
+  padding: 10px 20px;
+  border: 1px solid #edebeb;
+  margin: 0 10px;
+}
+.active-animal-button {
+  background-color: gray;
+  color: white;
+}
+
+@media (max-width: 650px) {
+  body {
+    font-size: 14px;
+  }
+  .images img {
+    width: 220px;
+  }
+  .animal-button {
+    padding: 7px 12px;
+  }
+  .animal-list {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 425px) {
+  body {
+    font-size: 12px;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+  }
+  .images img {
+    width: 200px;
+  }
+  .animal-button {
+    padding: 7px 12px;
+  }
+  .animal-list {
+    margin-top: 70px;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    font-size: 10px;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+  }
+  .images img {
+    width: 140px;
+  }
+  .animal-button {
+    padding: 5px 10px;
+  }
+  .animal-list {
+    margin-top: 50px;
+  }
+}
