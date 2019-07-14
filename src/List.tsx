@@ -12,6 +12,7 @@ const List: React.FC<Props> = ({ animals }) => {
       {
         animals.map(animal =>
           <Item
+            key={animal._id}
             _id={animal._id}
             imageUrl={animal.imageUrl}
             age={animal.age}
