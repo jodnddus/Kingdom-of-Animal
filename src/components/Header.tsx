@@ -8,7 +8,7 @@ interface Props {
 const Header: React.FC<Props> = ({ onClick, activeTab }) => {
   return (
     <div className="header">
-      <h1>ㅅㅋㅌㄹ</h1>
+      <h1>Kingdom of Animal</h1>
       <div className="animal-buttons">
         <button
           className={activeTab === "dogs" ? "animal-button active-animal-button" : "animal-button"}

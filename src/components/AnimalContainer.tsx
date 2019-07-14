@@ -25,7 +25,7 @@ class AnimalContainer extends React.Component<Props, State> {
     e.preventDefault();
     this.setState({
       tab: tab
-    })
+    });
   }
 
   render() {
