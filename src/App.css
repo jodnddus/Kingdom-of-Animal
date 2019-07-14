@@ -1,8 +1,7 @@
-@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
-
 body {
   margin: 0px;
-  font-family: 'NanumSquare', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+  sans-serif;
 }
 .items {
   display: flex;
@@ -12,7 +11,9 @@ body {
   margin: 20px 0;
 }
 .info b {
+  all: unset;
   font-size: 1.5rem;
+  font-weight: 500;
 }
 .header {
   display: flex;
@@ -24,6 +25,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+}
+.header h1 {
+  font-weight: 400;
 }
 .animal-list {
   margin-top: 90px;
