@@ -1,6 +1,6 @@
 import React from 'react';
 import Item from './Item';
-import { Animal } from './interface';
+import { Animal } from '../interface';
 
 interface Props {
   animals: Animal[];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animal } from './interface';
+import { Animal } from '../interface';
 
 const Item: React.FC<Animal> = ({ _id, imageUrl, age, name, gender }) => {
   return (

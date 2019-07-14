@@ -1,7 +1,7 @@
 import React from 'react';
 import List from './List';
 import Header from './Header';
-import { Animal } from './interface';
+import { Animal } from '../interface';
 
 interface Props {
   dogs: Animal[];

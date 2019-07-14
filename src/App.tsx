@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimalContainer from './AnimalContainer';
+import AnimalContainer from './components/AnimalContainer';
 import dogData from './data/q1_dog.json';
 import catData from './data/q1_cat.json';
 import './App.css';
