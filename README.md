@@ -6,7 +6,7 @@
 * 크롬에서는 자동으로 이미지를 캐싱한다는 것을 알아냄.
 
 ### 컴포넌트 구조
-* AnimalContainer: 데이터와 이벤트 함수들이 모여 있는 곳. 필요한 컴포넌트에 Props를 통해서 전달이 됨.
+* AnimalContainer: 데이터와 이벤트 함수들이 모여 있는 곳. 데이터가 필요한 컴포넌트에 Props를 통해서 전달이 됨.
   * Header: 고양이버튼과 강아지버튼, 페이지 이름이 표현되는 컴포넌트.
   * List: Item의 집합으로 이루어진 컴포넌트. map함수를 이용해서 손쉽게 렌더링 성공.
   * Item: 각각의 데이터를 표현하기 위한 컴포넌트. 재사용성을 위해서 만들어짐.
@@ -19,6 +19,16 @@ Semantic UI React의 [Tab](https://react.semantic-ui.com/modules/tab/)을 이용
 
 ### Responsive UI
 미디어 쿼리를 이용해서 650px, 425px, 320px, 이하일 때 반영되는 코드를 짬.
+
+### API 호출
+* axios 사용.
+* /dog와 /cat 두가지 엔드포인트에 호출을 함.
+* 강아지, 고양이 데이터를 받은 후 두 값을 동시에 리턴.
+
+### API 서버
+* express.js 사용.
+* 단순하게 /dog, /cat 으로 들어오는 요청에 대해 라우팅을 함.
+* 성공적으로 요청이 된다면, 200코드와 json데이터를 보냄.
 
 ### 인터페이스
 ~~~ javascript
@@ -33,4 +43,6 @@ interface Animal {
 
 ## 프로젝트 Setting
 ### CRA [Typescript.Ver]
-npx create-react-app [프로젝트 이름] --typescript
+> npx create-react-app [프로젝트 이름] --typescript
+### express
+> express [프로젝트 이름]
