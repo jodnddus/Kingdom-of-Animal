@@ -15,7 +15,7 @@
 Semantic UI React의 [Tab](https://react.semantic-ui.com/modules/tab/)을 이용해서 구현하려 했지만, 직접 만드는 것이 편할것 같아 직접 구현하게 되었음.
 
 ### Sticky Header
-구현해본 경험이 없는 디자인이기에 당혹스러웠지만, [fixed(고정위치)](https://poiemaweb.com/css3-position)를 이용한다면 손쉽게 구현할수 있다는것을 검색을 통해서 알아냄.
+구현해본 경험이 없는 디자인이였지만, [fixed(고정위치)](https://poiemaweb.com/css3-position)를 이용한다면 손쉽게 구현할수 있다는것을 검색을 통해서 알아냄.
 
 ### Responsive UI
 미디어 쿼리를 이용해서 650px, 425px, 320px, 이하일 때 반영되는 코드를 짬.
