@@ -1,42 +1,43 @@
-import React from 'react';
-import List from './List';
+import react from 'react';
+import { IAnimal } from '../interface';
 import Header from './Header';
-import { Animal } from '../interface';
+import List from './List';
 
-interface Props {
-  dogs: Animal[];
-  cats: Animal[];
+interface IProps {
+  dogs: IAnimal[];
+  cats: IAnimal[];
 }
 
-interface State {
+interface IState {
   tab: string;
 }
 
-class AnimalContainer extends React.Component<Props, State> {
-  constructor(p: Props) {
+class AnimalContainer extends react.Component<IProps, IState> {
+  constructor(p: IProps) {
     super(p);
     this.state = {
-      tab: "cats"
-    }
+      tab: 'cats',
+    };
     this.onClick = this.onClick.bind(this);
   }
 
-  onClick(e: MouseEvent, tab: string) {
+  public onClick(e: MouseEvent, tab: string) {
     e.preventDefault();
+    document.documentElement.scrollTop = 0;
     this.setState({
-      tab: tab
+      tab,
     });
   }
 
-  render() {
+  public render() {
     return (
       <div className="AnimalContainer">
         <Header onClick={this.onClick} activeTab={this.state.tab} />
-        {
-          this.state.tab === "dogs"
-            ? <List animals={this.props.dogs} />
-            : <List animals={this.props.cats} />
-        }
+        {this.state.tab === 'dogs' ? (
+          <List animals={this.props.dogs} />
+        ) : (
+          <List animals={this.props.cats} />
+        )}
       </div>
     );
   }

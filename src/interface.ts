@@ -1,4 +1,4 @@
-export interface Animal {
+export interface IAnimal {
   _id: string;
   imageUrl: string;
   age: number;

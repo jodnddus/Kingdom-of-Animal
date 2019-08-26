@@ -1,13 +1,16 @@
-import React from 'react';
-import LazyLoad from 'react-lazyload';
-import { Animal } from '../interface';
+import react from 'react';
+// tslint:disable-next-line: import-name
+import Lazyload from 'react-lazyload';
+import { IAnimal } from '../interface';
 
-const Item: React.FC<Animal> = ({ _id, imageUrl, age, name, gender }) => {
+const item: React.FC<IAnimal> = ({ _id, imageUrl, age, name, gender }) => {
   return (
-    <LazyLoad height={200}>
+    <Lazyload height={200}>
       <div className="items">
         <div className="info">
-          <p><b>{name}</b>&nbsp;({age})</p>
+          <p>
+            <b>{name}</b>&nbsp;({age})
+          </p>
           <p>{gender}</p>
           <p>{_id}</p>
         </div>
@@ -15,8 +18,8 @@ const Item: React.FC<Animal> = ({ _id, imageUrl, age, name, gender }) => {
           <img src={imageUrl} alt="animal" />
         </div>
       </div>
-    </LazyLoad>
+    </Lazyload>
   );
-}
+};
 
-export default Item;
+export default item;

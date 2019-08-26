@@ -1,46 +1,47 @@
-import React from 'react';
-import AnimalContainer from './components/AnimalContainer';
+import react from 'react';
 import * as api from './api';
-import { Animal } from './interface';
 import './App.css';
+import AnimalContainer from './components/AnimalContainer';
+import { IAnimal } from './interface';
 
-interface State {
-  dog: Animal[];
-  cat: Animal[];
+interface IState {
+  dog: IAnimal[];
+  cat: IAnimal[];
 }
 
-interface Props {
-  // none props
-}
+// tslint:disable-next-line: no-empty-interface
+interface IProps {}
 
-class App extends React.Component<Props, State> {
-  constructor(p: Props) {
+class App extends react.Component<IProps, IState> {
+  constructor(p: IProps) {
     super(p);
     this.state = {
+      cat: [],
       dog: [],
-      cat: []
-    }
+    };
     this.getAnimal = this.getAnimal.bind(this);
   }
 
-  getAnimal = async () => {
+  public async getAnimal() {
     try {
       const { dogData, catData } = await api.getAnimal('dog', 'cat');
+      // tslint:disable-next-line: no-console
       console.log(dogData, catData);
       this.setState({
+        cat: catData.data,
         dog: dogData.data,
-        cat: catData.data
       });
     } catch (e) {
+      // tslint:disable-next-line: no-console
       console.log(e);
     }
   }
 
-  componentDidMount() {
+  public componentDidMount() {
     this.getAnimal();
   }
 
-  render() {
+  public render() {
     return (
       <div className="App">
         <AnimalContainer dogs={this.state.dog} cats={this.state.cat} />
