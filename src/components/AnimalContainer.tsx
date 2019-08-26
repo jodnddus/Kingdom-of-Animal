@@ -1,4 +1,4 @@
-import react from 'react';
+import * as React from 'react';
 import { IAnimal } from '../interface';
 import Header from './Header';
 import List from './List';
@@ -12,7 +12,7 @@ interface IState {
   tab: string;
 }
 
-class AnimalContainer extends react.Component<IProps, IState> {
+class AnimalContainer extends React.Component<IProps, IState> {
   constructor(p: IProps) {
     super(p);
     this.state = {

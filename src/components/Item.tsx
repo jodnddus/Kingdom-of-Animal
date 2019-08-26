@@ -1,4 +1,4 @@
-import react from 'react';
+import * as React from 'react';
 // tslint:disable-next-line: import-name
 import Lazyload from 'react-lazyload';
 import { IAnimal } from '../interface';

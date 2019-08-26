@@ -1,4 +1,4 @@
-import react from 'react';
+import * as React from 'react';
 import * as api from './api';
 import './App.css';
 import AnimalContainer from './components/AnimalContainer';
@@ -12,7 +12,7 @@ interface IState {
 // tslint:disable-next-line: no-empty-interface
 interface IProps {}
 
-class App extends react.Component<IProps, IState> {
+class App extends React.Component<IProps, IState> {
   constructor(p: IProps) {
     super(p);
     this.state = {
