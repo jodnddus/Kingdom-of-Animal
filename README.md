@@ -1,6 +1,6 @@
 # Kingdom-of-Animal
 
-# Kingdom-of-Animal-Server
+## Kingdom-of-Animal-Server
 서버 클론해서 실행해야 함.
 [Kingdom-of-Animal-Server](https://github.com/jodnddus/Kingdom-of-Animal-Server)
 
